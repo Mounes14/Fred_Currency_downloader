@@ -1,19 +1,11 @@
 #!/usr/bin/env python3
-"""
-🌍 FRED Dynamic Currency Downloader
-----------------------------------
-Simple Streamlit web app to fetch daily exchange-rate data
-from the Federal Reserve (FRED) for multiple currency pairs.
-Users choose base & quote currencies and a date range,
-download the resulting CSV file directly.
-"""
+
 
 import streamlit as st
 import pandas_datareader.data as web
 import pandas as pd
 import datetime
 
-# Mapping between currency codes and FRED dataset IDs (all quoted vs USD)
 FRED_CODES = {
     "EUR": "DEXUSEU",
     "GBP": "DEXUSUK",
